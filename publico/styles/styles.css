@@ -1,0 +1,55 @@
+table {
+    border-style:initial;
+    border-collapse: collapse;
+}
+
+body{
+    background-image: url("../../publico/Img/algo3.gif");
+}
+
+#nomb{
+    margin-left: 25px;
+}
+
+#stock{
+    margin-left: 18px;
+}
+
+#costo{
+    margin-left: 38px;
+}
+
+#ing{
+    width: 350px;
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: rgb(231, 0, 0);
+    margin-left: 650px;
+    color: white;
+  }
+
+#algo{
+    background-color: rgb(245, 222, 179);
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 40px;
+}
+
+#algo1{
+    background-color: thistle;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 40px;
+}
+
+/* #trans{
+   
+} */
+
+
