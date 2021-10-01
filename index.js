@@ -4,6 +4,7 @@ const path = require('path')
 
 //Inicializaciones
 const app = express()
+require('./database')
 
 //Configuraciones
 app.set('port', process.env.SV_PORT ? process.env.SV_PORT : 3000)
