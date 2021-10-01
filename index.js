@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 
@@ -5,7 +6,7 @@ const path = require('path')
 const app = express()
 
 //Configuraciones
-app.set('port', 3000)
+app.set('port', process.env.SV_PORT ? process.env.SV_PORT : 3000)
 
 ////Middlewares
 
