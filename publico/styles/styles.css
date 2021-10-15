@@ -30,26 +30,33 @@ body{
     -moz-border-radius: 25px;
     border-radius: 25px;
     background: rgb(231, 0, 0);
-    margin-left: 650px;
+    margin-left: 400px;
     color: white;
   }
 
-#algo{
+
+#Products{
     background-color: rgb(245, 222, 179);
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 40px;
+    width: 300px;
+    margin-top: 3%;
 }
 
-#algo1{
+#Transaction{
     background-color: thistle;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 40px;
+    width: 300px;
+    margin-top: 3%;
+    
 }
 
-/* #trans{
-   
-} */
+.tableFormat{
+    background-color: lightskyblue;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+
 
 
