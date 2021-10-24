@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         document.getElementById("ing2").value = typeTrans
     });
 
-
+    
     let selectProd;
     document.getElementById("listaProd").addEventListener('change', () =>{
     selectProd = document.getElementById("listaProd").value;
@@ -102,16 +102,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
         let subt = obj.costo * obj.cantidad
         puTable.innerHTML += `
         <tr>
-                    <th>${obj.nombre}</th>
-                    <th>${obj.tipo}</th>
-                    <th>${obj.cantidad}</th>
-                    <th>${subt}</th>
-                    <th>${subt * (iva/100)}</th>
-                    <th>${subt + (subt * (iva/100))}</th>
+                    <td>${obj.nombre}</td>
+                    <td>${obj.tipo}</td>
+                    <td>${obj.cantidad}</td>
+                    <td>${subt}</td>
+                    <td>${subt * (iva/100)}</td>
+                    <td>${subt + (subt * (iva/100))}</td>
         </tr>
-        
-        
-        
         `
     })
 
