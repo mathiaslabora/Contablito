@@ -3,7 +3,7 @@ table {
     border-collapse: collapse;
 }
 
-body{
+#body_1{
     background-image: url("../../public/img/algo3.gif");
 }
 
@@ -56,6 +56,95 @@ table{
     width: 100%;
     text-align: center;
 }
+
+
+#body_2 {
+    padding: 0px;
+    margin: 0px;   
+}
+
+/* #body_2 img, #btnPass{
+    display:block;
+    margin:auto;
+    width: 40%;
+ } */
+
+#contenido {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(173, 230, 218);
+}
+
+#logo {
+    display: flex;
+    margin:auto;
+    width: 40%;
+}
+
+#personaje{
+    position: fixed;
+    bottom: 0px;
+    left: -490px;
+    background-image: url(../../public/img/frames2.png);
+    height: 600px;
+    width: 550px;
+    animation-name: myPerson;
+    animation-duration: 1s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: 1;
+}
+
+@keyframes myPerson {
+    from{
+        background-position-x: 0px;
+    } 
+
+    to{
+        background-position-x: -5409px;
+    }
+}
+
+.globo{
+    position: absolute;
+    width: 250px;
+    height: 150px; 
+    top: 60px;
+    left: 300px;
+    right: 10px;
+    padding: 1.5em;
+    border-radius: 2em;
+    font-family: sans-serif;
+    background-color: white;
+    filter: drop-shadow(0px 0px 1px black) ;
+  }
+ 
+  .globo::before{
+    content: '';
+    position: absolute; 
+    z-index: -1;
+    width: var(--colita);
+    height: var(--colita);
+    --colita: 50px;
+    left: 10px;
+    bottom: calc( var(--colita) / -2.5);
+    border-radius: 0 0 10em 0;
+    box-shadow: 
+      inset calc(var(--colita)/-3) calc(var(--colita)/4) 0 0 white;
+  }
+
+  #next{
+    position: absolute;
+    top: 173px;
+    left: 484px;
+    border-radius: 10em;
+    filter: drop-shadow(0px 0px 1px black) ;
+    
+  }
+
+  
 
 
 
