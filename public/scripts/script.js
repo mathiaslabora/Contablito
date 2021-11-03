@@ -2,18 +2,18 @@
 let products = [];
 let sale = [];
 
-
-
 document.addEventListener("DOMContentLoaded", function (e) {
-
-    let descr = document.getElementById('desc')
+//si uso deja de andar formulario
+   /*  let descr = document.getElementById('desc')
     let name = document.getElementById('nomb')
     let cost = document.getElementById('costo')
     let amount = document.getElementById('stock')
-    let quant = document.getElementById('cantProd')
+    let quant = document.getElementById('cantProd') */
     
-    
-
+    /* document.getElementById("ing").addEventListener("click", function(event){
+        event.preventDefault()
+      });
+ */
     let listProdTrans = document.getElementById('listaProd');
     let option = document.createElement('option');
     //agrega a lista select las opciones de productos
@@ -36,17 +36,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
             obj.cantidad = amount.value;
             products.push(obj);
             listProd(products)
+
         }
-        /* else {
-            (!descr.value)? 
-   
-           } */
+       
         descr.value = "";
         name.value = "";
         amount.value = "";
         cost.value = "";
 
-        console.log(products)
     })
 
 
@@ -68,13 +65,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
     //TRANSACCION
     let typeTrans = "Compra";
     document.getElementById("ing2").value = typeTrans
+    document.getElementById("cantProd").placeholder = "Ingrese cantidad de "+typeTrans;
     document.getElementById('trans').addEventListener('change', () => {
         typeTrans = document.getElementById('trans').value
         document.getElementById("ing2").value = typeTrans
+        document.getElementById("cantProd").placeholder = "Ingrese cantidad de "+typeTrans;
     });
 
     
-    let selectProd;
+    let selectProd ;
     document.getElementById("listaProd").addEventListener('change', () =>{
     selectProd = document.getElementById("listaProd").value;
     })
@@ -90,7 +89,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
             })
 
     document.getElementById('ing2').addEventListener('click', () => {
-        
+        //si cuando preciono boton no hay ningun prod seleccionado o cantidad selecc, envio un mensaje.
+        if((selectProd === undefined) || (selectProd === "") || (quant.value === "")){
+            document.getElementById('msj').innerHTML = `
+            <div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+            `
+        }else{
+
+
         let puTable = document.getElementById("tableProducts");
         let obj = {}
         obj.nombre = selectProd;
@@ -110,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     <td>${subt + (subt * (iva/100))}</td>
         </tr>
         `
+        }
     })
 
 

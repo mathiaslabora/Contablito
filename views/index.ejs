@@ -1,0 +1,100 @@
+<%- include ('partials/_header'); -%>
+
+<body class="imgbody" id="body_1">
+    <div id="msj"></div>
+    <div style="background-color: rgba(255, 255, 255, 0.397);" class="container">
+        <div class="row justify-content-between d-flex">
+            <div style="border-style:outset;" id="Products" class="col-5 p-5">
+
+                <h4 class="text-center">Registro de productos:</h4>
+                <form action="/addProd" method="POST">
+                    <div class="form-group input-group-sm mt-4">
+                        <label for="nomb">Nombre:</label><input class="form-control"
+                            placeholder="Ingrese nombre de nuevo producto" name="nombre" type="text" id='nomb'>
+                    </div>
+                    <div class="form-group input-group-sm">
+                        <label for="desc">Descripcion:</label><input class="form-control"
+                            placeholder="Ingrese una descripcion del producto" name="descripcion" type="text" id='desc'>
+                    </div>
+                    <div class=" row justify-content-between">
+                        <div class="form-group col input-group-sm">
+                            <label for="stock">Cantidad:</label><input class="form-control"
+                                placeholder="Cantidad inicial (stock)" name="cantidad"type="number" id='stock'>
+                        </div>
+                        <div class="form-group col input-group-sm">
+                            <label for="costo">Costo:</label><input class="form-control" name="costo" type="number"
+                                placeholder="Costo por defecto" id='costo'>
+                        </div>
+                    </div>
+                    <button type="submit" style="background-color: #0ABBB5;" class="mt-4 btn btn-success"
+                        id='ing'>Añadir producto</button>
+                </form>
+            </div>
+
+            <div style="border-style:outset;" id="Transaction" class="col-7 p-5">
+                <h4 class="text-center">Transacción:</h4>
+                <form>
+                    <div class="mt-4 row justify-content-between">
+                        <div class="form-group col-3">
+                            <label for="trans">Tipo:</label>
+                            <select class="form-control" id="trans">
+                                <option value="Compra">Compra</option>
+                                <option value="Venta">Venta</option>
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="listaProd">Seleccione un producto:</label>
+                            <br>
+                            <select class="form-control" id="listaProd">
+                                <option value="" selected>Productos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="form-group  col">
+                            <label for="cantProd">Cantidad:</label>
+                            <input class="form-control" type="number" id="cantProd">
+                        </div>
+                        <div class="form-group col">
+                            <label for="costoUnit">Costo Unitario:</label>
+                            <input class="form-control " type="number" id="costoUnit">
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="form-group col-3">
+                            <label for="iva">Iva:</label>
+                            <select class="form-control" name="" id="iva">
+                                <option checked value="22">Maximo</option>
+                                <option value="10">Minimo</option>
+                                <option value="0">Excento</option>
+                            </select>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+
+
+                    <input type="submit" style="background-color: #0ABBB5;" class="btn btn-success" id="ing2" value="">
+
+
+                </form>
+            </div>
+        </div>
+        <div style="border-style:outset;" class="tableFormat">
+            <table id="tableProducts">
+                <tr>
+                    <th>Producto</th>
+                    <th>Tipo</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>IVA</th>
+                    <th>Total</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tableFormat" id="Sub_Tot"> </div>
+
+    </div>
+    
+    <%- include ('partials/_footer'); -%>
