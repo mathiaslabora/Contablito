@@ -3,11 +3,11 @@ table {
     border-collapse: collapse;
 }
 
-#body_1{
-    background-image: url("../../public/img/algo3.gif");
-}
+/* #body_1{
+    background-image: url("../../public/img/contablito.jpg");
+} */
 
-#nomb{
+/* #nomb{
     margin-left: 25px;
 }
 
@@ -21,9 +21,9 @@ table {
 
 #ing{
     width: 350px;
-}
+} */
 
-#circle {
+/* #circle {
     width: 50px;
     height: 50px;
     -webkit-border-radius: 25px;
@@ -33,9 +33,12 @@ table {
     margin-left: 400px;
     color: white;
   }
-
-
-#Products{
+ */
+.imgbody {
+    background-image: url("../../public/img/contablito.jpg");
+    background-size: cover;
+}
+/* #Products{
     background-color: rgb(245, 222, 179);
     width: 300px;
     margin-top: 3%;
@@ -46,11 +49,9 @@ table {
     width: 300px;
     margin-top: 3%;
     
-}
+} */
 
-.tableFormat{
-    background-color: lightskyblue;
-}
+
 
 table{
     width: 100%;
