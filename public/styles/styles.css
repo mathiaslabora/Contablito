@@ -3,11 +3,35 @@ table {
     border-collapse: collapse;
 }
 
-/* #body_1{
-    background-image: url("../../public/img/contablito.jpg");
-} */
+ 
+.imgbody {
+    background-image: url("../../public/img/Recurso_1.png");
+    background-size: 35%;
+    background-color: rgb(173, 230, 218);
+    background-position-x: center;
+background-position-y: center;
+background-repeat: no-repeat;
+}
 
-/* #nomb{
+table{
+    width: 100%;
+    text-align: center;
+    font-weight:bold;
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+
+
+#body_2{
+    background-image: url("../img/Recurso_1.png");
+    background-color: rgb(173, 230, 218);
+    background-size: 45%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+#nomb{
     margin-left: 25px;
 }
 
@@ -21,9 +45,9 @@ table {
 
 #ing{
     width: 350px;
-} */
+}
 
-/* #circle {
+#circle {
     width: 50px;
     height: 50px;
     -webkit-border-radius: 25px;
@@ -33,11 +57,8 @@ table {
     margin-left: 400px;
     color: white;
   }
- */
-.imgbody {
-    background-image: url("../../public/img/contablito.jpg");
-    background-size: cover;
-}
+
+
 /* #Products{
     background-color: rgb(245, 222, 179);
     width: 300px;
@@ -49,45 +70,16 @@ table {
     width: 300px;
     margin-top: 3%;
     
-} */
-
-
-
-table{
-    width: 100%;
-    text-align: center;
 }
+ */
 
 
-#body_2 {
-    padding: 0px;
-    margin: 0px;   
-}
 
-/* #body_2 img, #btnPass{
-    display:block;
-    margin:auto;
-    width: 40%;
- } */
-
-#contenido {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(173, 230, 218);
-}
-
-#logo {
-    display: flex;
-    margin:auto;
-    width: 40%;
-}
 
 #personaje{
-    position: fixed;
+    position: relative;
     bottom: 0px;
+    top: 100px;
     left: -490px;
     background-image: url(../../public/img/frames2.png);
     height: 600px;
@@ -112,7 +104,7 @@ table{
     position: absolute;
     width: 250px;
     height: 150px; 
-    top: 60px;
+    top: 30px;
     left: 300px;
     right: 10px;
     padding: 1.5em;
@@ -138,14 +130,94 @@ table{
 
   #next{
     position: absolute;
-    top: 173px;
+    top: 143px;
     left: 484px;
     border-radius: 10em;
     filter: drop-shadow(0px 0px 1px black) ;
     
   }
 
+ /* registro  */
+#registro {
+    position: absolute;
+    width: 50%;
+    margin-left: 200px;
+}
   
-
-
+#registro form {
+    width: 60%;
+    margin: 60px auto;
+    background: #efefefd7;
+    padding: 60px 120px 80px 120px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  }
+#registro label {
+    display: block;
+    position: relative;
+    margin: 40px 0px;
+  }
+  #registro .label-txt {
+    position: absolute;
+    top: -1.6em;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: .8em;
+    letter-spacing: 1px;
+    color: rgb(120,120,120);
+    transition: ease .3s;
+  }
+  #registro .input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  #registro .line-box {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #BCBCBC;
+  }
+  
+  #registro  .line {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8BC34A;
+    transition: ease .6s;
+  }
+  
+  #registro .input:focus + .line-box .line {
+    width: 100%;
+  }
+  
+  #registro .label-active {
+    top: -3em;
+  }
+  
+  #registro  button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgb(220,220,220);
+    font-weight: bold;
+    color: rgb(120,120,120);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease .3s;
+  }
+  
+  #registro button:hover {
+    background: #8BC34A;
+    color: #ffffff;
+  }
+  
 
