@@ -2,28 +2,19 @@ const express = require('express');
 const router = express.Router();
 
 const product = require('../models/product')
+const controller = require('../controllers/products.controller')
 
-/* router.get('/', async (req, res)=>{
+ router.post('/', controller.product)
+ 
+
+
+ router.get('/', (async (req, res)=>{
     try {
-        const pDB = await product.find()
-        console.log(pDB)
-        res.render('index');
+        const allProdDB = await product.find();
+        res.json(allProdDB)
+        res.redirect('/index2');
     } catch (error) {
         console.log(error)
     }
- }) */
- 
- router.post('/', async (req, res)=>{
- const body = req.body
- console.log(body)
- try {
-     const prodDB = new product(body)
-     await prodDB.save()
-     console.log(prodDB)
-     res.render('index');
- } catch (error) {
-     console.log(error)
- }
- })
- 
- module.exports = router;
+    }))
+ module.exports = router

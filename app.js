@@ -3,7 +3,6 @@ const path = require('path')
 const express = require('express')
 const app = express()
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 //Inicializaciones
 
@@ -37,7 +36,9 @@ mongoose.connect(URI, {useNewUrlParser: true} )
 
 //Rutas
 app.use('/', indexRoutes);
+app.use('/index2', indexRoutes);
 app.use('/addProd', require('./routes/products'));
+app.use('/addTrans', require('./routes/transactions'));
 
 //Iniciar el servidor
 app.listen(app.get('port'), () =>
